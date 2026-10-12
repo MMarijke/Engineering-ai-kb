@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" width="400" height="220" role="img" aria-labelledby="rc-title rc-desc" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <title id="rc-title">RC low-pass filter</title>
+  <desc id="rc-desc">A series resistor R connects the input to the output node. A capacitor C connects the output node to the ground rail. Vout is measured across the capacitor.</desc>
+  <rect width="400" height="220" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <g fill="none" stroke="#24292f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Top rail with resistor -->
+    <path d="M30 60 H80 H95 L103 48 L119 72 L135 48 L151 72 L159 60 H340"/>
+    <!-- Capacitor branch -->
+    <path d="M250 60 V100 M232 100 H268 M232 112 H268 M250 112 V160"/>
+    <!-- Bottom rail -->
+    <path d="M30 160 H340"/>
+    <!-- Ground symbol -->
+    <path d="M185 160 V172 M170 172 H200 M176 179 H194 M182 186 H188"/>
+  </g>
+  <!-- Terminals and node -->
+  <g fill="#ffffff" stroke="#24292f" stroke-width="2">
+    <circle cx="30" cy="60" r="4"/>
+    <circle cx="30" cy="160" r="4"/>
+    <circle cx="340" cy="60" r="4"/>
+    <circle cx="340" cy="160" r="4"/>
+  </g>
+  <circle cx="250" cy="60" r="3.5" fill="#24292f"/>
+  <circle cx="250" cy="160" r="3.5" fill="#24292f"/>
+  <!-- Labels -->
+  <g fill="#24292f" font-size="14" text-anchor="middle">
+    <text x="30" y="44">Vin</text>
+    <text x="340" y="44">Vout</text>
+    <text x="127" y="38">R</text>
+  </g>
+  <text x="280" y="110" fill="#24292f" font-size="14">C</text>
+  <text x="200" y="208" text-anchor="middle" font-size="13" fill="#57606a">fc = 1 / (2π R C)   ·   τ = R C</text>
+</svg>

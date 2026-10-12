@@ -1,0 +1,110 @@
+site_name: Engineering & AI Knowledge Base
+site_description: A personal, Markdown-based knowledge base for engineering and AI, with diagrams, equations and worked examples.
+# After publishing, set these two to your real values:
+repo_url: https://github.com/YOUR-USERNAME/engineering-ai-kb
+repo_name: YOUR-USERNAME/engineering-ai-kb
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+plugins:
+  - search
+  - tags
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+  - AI:
+      - ai/index.md
+      - Machine learning fundamentals: ai/machine-learning-fundamentals.md
+      - Neural networks & backprop: ai/neural-networks-and-backprop.md
+      - Transformers: ai/transformers.md
+      - Reinforcement learning: ai/reinforcement-learning.md
+      - ML systems lifecycle: ai/ml-systems-lifecycle.md
+  - Robotics:
+      - robotics/index.md
+      - Sense-plan-act architecture: robotics/sense-plan-act.md
+      - Kinematics: robotics/kinematics.md
+      - State estimation: robotics/state-estimation.md
+      - Motion planning: robotics/motion-planning.md
+  - Control:
+      - control-systems/index.md
+      - PID control: control-systems/pid-control.md
+      - Stability & frequency response: control-systems/stability-and-frequency-response.md
+      - State space & LQR: control-systems/state-space-and-lqr.md
+  - Physics:
+      - physics/index.md
+      - Classical mechanics: physics/classical-mechanics.md
+      - Thermodynamics: physics/thermodynamics.md
+      - Electromagnetism: physics/electromagnetism.md
+      - Quantum & semiconductors: physics/quantum-and-semiconductors.md
+  - Electronics:
+      - electronics/index.md
+      - Circuit fundamentals: electronics/circuit-fundamentals.md
+      - Microcontrollers & buses: electronics/microcontrollers-and-buses.md
+  - Aerospace:
+      - aerospace/index.md
+      - Orbital mechanics: aerospace/orbital-mechanics.md
+      - Rocket equation & staging: aerospace/rocket-equation-and-staging.md
+      - Aerodynamics basics: aerospace/aerodynamics-basics.md
+  - Mathematics:
+      - mathematics/index.md
+      - Linear algebra: mathematics/linear-algebra.md
+      - Probability & statistics: mathematics/probability-and-statistics.md
+      - Calculus & optimization: mathematics/calculus-and-optimization.md
+  - Reference:
+      - Glossary: glossary.md
+      - Reading list: reading-list.md
+      - Tags: tags.md
+      - Conventions: meta/conventions.md

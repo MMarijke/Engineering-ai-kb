@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img" aria-labelledby="ho-title ho-desc" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <title id="ho-title">Hohmann transfer orbit</title>
+  <desc id="ho-desc">A spacecraft in a small circular orbit of radius r1 fires a prograde burn at the point nearest the planet, coasts along half of an elliptical transfer orbit, and fires a second burn at the far point to circularize at radius r2.</desc>
+  <rect width="400" height="300" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <!-- Orbits -->
+  <circle cx="200" cy="150" r="50" fill="none" stroke="#0969da" stroke-width="2"/>
+  <circle cx="200" cy="150" r="130" fill="none" stroke="#1a7f37" stroke-width="2"/>
+  <!-- Transfer half-ellipse (perigee on the right, apogee on the left) -->
+  <path d="M250 150 A90 80.6 0 0 0 70 150" fill="none" stroke="#bf3989" stroke-width="2.5" stroke-dasharray="7 5"/>
+  <!-- Planet -->
+  <circle cx="200" cy="150" r="12" fill="#a5d6ff" stroke="#0969da" stroke-width="1.5"/>
+  <!-- Burn points -->
+  <circle cx="250" cy="150" r="5" fill="#cf222e"/>
+  <circle cx="70" cy="150" r="5" fill="#cf222e"/>
+  <!-- Radius markers -->
+  <g stroke="#57606a" stroke-width="1" stroke-dasharray="3 3">
+    <line x1="200" y1="150" x2="250" y2="150"/>
+    <line x1="70" y1="150" x2="200" y2="150"/>
+  </g>
+  <!-- Labels -->
+  <g fill="#24292f" font-size="13">
+    <text x="258" y="146">Burn 1 (Δv₁)</text>
+    <text x="258" y="162" fill="#57606a" font-size="11">leave orbit 1</text>
+    <text x="78" y="138">Burn 2 (Δv₂)</text>
+    <text x="78" y="172" fill="#57606a" font-size="11">circularize</text>
+    <text x="216" y="170" fill="#0969da" font-size="12">r₁</text>
+    <text x="128" y="144" fill="#1a7f37" font-size="12">r₂</text>
+    <text x="200" y="76" text-anchor="middle" fill="#bf3989">transfer ellipse (half orbit)</text>
+  </g>
+  <text x="200" y="292" text-anchor="middle" font-size="12" fill="#57606a">Inner orbit: blue · outer orbit: green · transfer: dashed</text>
+</svg>

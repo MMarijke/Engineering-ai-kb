@@ -1,0 +1,18 @@
+# Built site
+site/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Obsidian local workspace state (keep the vault usable, but don't commit per-machine state)
+docs/.obsidian/workspace*.json
+docs/.obsidian/cache
